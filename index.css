@@ -1,8 +1,9 @@
-html body{
+html body {
     margin: 0px;
     padding: 0px;
 }
-#root{
+
+#root {
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -11,45 +12,51 @@ html body{
     align-items: center;
     background-color: #1f1f1f;
 }
-input{
+
+input {
     margin: 20px;
     display: none;
 }
-label{
+
+label {
     transition-duration: 0.5s;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-height: 100px;
-width: 100px;
-background-color: brown;
-border: none;
-color: black;
-border-radius: 20px;
-font-family: 'Courier New', Courier, monospace;
-font-size:1em;
-padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+    border: none;
+    color: black;
+    border-radius: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    padding: 2%;
 }
-label:hover{
+
+label:hover {
     transition-duration: 0.5s;
     height: 120px;
     width: 120px;
-    font-size:1.2em ;
+    font-size: 1.2em;
     padding: 3%;
 }
-.corn{
+
+.corn {
     position: absolute;
     right: 30px;
     top: 30px;
     height: 30px;
     width: 30px;
 }
-.corn:hover{
+
+.corn:hover {
     height: 40px;
     width: 40px;
 }
-.table{
+
+.table {
     min-height: 20vh;
     max-height: 70vh;
     width: 90vw;
@@ -57,36 +64,44 @@ label:hover{
     border-collapse: collapse;
     text-align: center;
 }
-tr:hover{
-   background-color:  brown;
-   }
 
-th{
+tr:hover {
+    background-color: brown;
+}
+
+tr[connect]+tr {
+    background-color: brown;
+}
+
+th {
     border-bottom: 2px solid #1f1f1f;
     padding: 10px 8px
 }
-thead th{
-    background-color:  brown;
+
+thead th {
+    background-color: brown;
 }
-thead{
+
+thead {
     border-collapse: separate;
     padding: 10px;
     border-radius: 20px;
-   margin: 20px;
-
+    margin: 20px;
     color: #1f1f1f;
     font-family: 'Courier New', Courier, monospace;
     font-size: larger;
 }
-tbody{
+
+tbody {
     border-radius: 20px;
     font-family: 'Courier New', Courier, monospace;
     font-size: larger;
 }
-button{
+
+button {
     height: 100px;
     width: 100px;
     background-color: brown;
     border: none;
     color: #1f1f1f
-    }
+}
