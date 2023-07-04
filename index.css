@@ -65,21 +65,15 @@ label:hover {
     text-align: center;
 }
 
-tr:hover {
+tbody:hover {
     background-color: brown;
 }
-
-tr[connect]:hover+tr[connect] {
-    background-color: brown;
+td{
+    padding: 5px;
 }
-
 th {
     border-bottom: 2px solid #1f1f1f;
     padding: 10px 8px
-}
-
-thead th {
-    background-color: brown;
 }
 
 thead {
@@ -88,12 +82,12 @@ thead {
     border-radius: 20px;
     margin: 20px;
     color: #1f1f1f;
+    background-color: brown;
     font-family: 'Courier New', Courier, monospace;
     font-size: larger;
 }
 
 tbody {
-    border-radius: 20px;
     font-family: 'Courier New', Courier, monospace;
     font-size: larger;
 }
