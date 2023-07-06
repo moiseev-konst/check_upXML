@@ -8,7 +8,7 @@ fileXML.addEventListener("change", handleFile);
 
 function handleFile() {
   const file = fileXML.files[0];
-   const rem = root.querySelector("table");
+  const rem = root.querySelector("table");
   if (rem) {
     rem.remove();
   }
@@ -47,7 +47,10 @@ function extractInfo(collection) {
     ) {
       if (alcoholCode) {
         ranges.push(range);
-        partyAlcohol[alcoholCode] = ranges;
+        partyAlcohol[alcoholCode] = partyAlcohol[alcoholCode]
+          ? [...partyAlcohol[alcoholCode], ...ranges]
+          : ranges;
+        console.log(partyAlcohol);
       }
       ranges = [];
       range = {};
@@ -58,8 +61,6 @@ function extractInfo(collection) {
     }
     alcoholCode =
       collection[i].getElementsByTagName("ns:AlcoholCode")[0].textContent;
-
-    partyAlcohol[alcoholCode] = { alcoholCode: alcoholCode };
 
     Array.from(collection[i].getElementsByTagName("ns:Code")).forEach(
       (mark) => {
